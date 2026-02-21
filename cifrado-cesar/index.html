@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cifrado César y Atbash</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Cifrado Clásico</h1>
+
+  <label>Método:</label>
+  <select id="metodo">
+    <option value="cesar">César</option>
+    <option value="atbash">Atbash</option>
+  </select>
+
+  <label>Modo:</label>
+  <select id="modo">
+    <option value="cifrar">Cifrar</option>
+    <option value="descifrar">Descifrar</option>
+  </select>
+
+  <label>Conjunto de caracteres (ASCII):</label>
+  <input type="text" id="charset"
+    value="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ">
+
+  <label>Módulo (N):</label>
+  <input type="number" id="modulo" value="63">
+
+  <label>Desplazamiento (solo César):</label>
+  <input type="number" id="shift" value="3">
+
+  <label>Texto:</label>
+  <textarea id="texto" rows="4"></textarea>
+
+  <button onclick="procesar()">Procesar</button>
+
+  <label>Resultado:</label>
+  <div class="resultado" id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
