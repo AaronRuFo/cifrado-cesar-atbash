@@ -6,6 +6,10 @@ function procesar() {
   const metodo = document.getElementById("metodo").value;
   const modo = document.getElementById("modo").value;
 
+  if (isNaN(modulo)) {
+  modulo = charset.length;
+}
+
   if (charset.length === 0) {
     alert("El conjunto de caracteres está vacío");
     return;
